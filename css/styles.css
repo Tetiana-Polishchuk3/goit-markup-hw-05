@@ -476,6 +476,7 @@ button {
   width: 264px;
   height: 40px;
   margin-right: 24px;
+  background-color: transparent;
 }
 input::placeholder {
   color: #fff;
@@ -543,11 +544,12 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%%;
+
   top: 24px;
   right: 24px;
   width: 24px;
   height: 24px;
+  border-radius: 50%;
   padding: 0;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -608,6 +610,7 @@ input::placeholder {
   position: absolute;
   height: 24px;
   top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -622,38 +625,58 @@ input::placeholder {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input:focus {
+.input:focus .icon {
   border: 1px solid #4d5ae5;
   outline: none;
 }
-.input:focus + svg {
+.input:focus-within .modal-icon {
   fill: #404bbf;
 }
-.comment-textarea {
-  width: 360px;
+.textarea-form {
   height: 120px;
-  resize: none;
-  padding: 16px;
-}
-.comment-textarea:focus {
-  border: 1px solid #4d5ae5;
-  outline: none;
-}
-.input-terms {
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+}
+.textarea-form:focus {
+  border-color: #4d5ae5;
+}
+.checkbox-terms {
+  margin-bottom: 24px;
+}
+.label-privacy {
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.input-terms:active {
-  fill: #404bbf;
+.span-privacy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+}
+input:checked + label > span {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 .privacy-policy {
-  line-height: 1.33333;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
 .send-btn {
