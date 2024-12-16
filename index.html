@@ -443,33 +443,36 @@
         </button>
         <p class="text-modal">Leave your contacts and we will call you back</p>
         <form name="contacts-form" autocomplete="off" novalidate>
-          <label class="label">
-            Name
-            <div class="container-modal">
+          <div class="container-modal">
+            <label class="label">
+              Name
+
               <svg class="modal-icon" width="18" height="18" fill="none">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
               <input class="input" type="text" name="username" autofocus />
-            </div>
-          </label>
-          <label class="label">
-            Phone
-            <div class="container-modal">
+            </label>
+          </div>
+          <div class="container-modal">
+            <label class="label">
+              Phone
+
               <svg class="modal-icon" width="18" height="24" fill="none">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-              <input class="input" type="phone" name="phone" />
-            </div>
-          </label>
-          <label class="label">
-            Email
-            <div class="container-modal">
+              <input class="input" type="tel" name="phone" />
+            </label>
+          </div>
+          <div class="container-modal">
+            <label class="label">
+              Email
+
               <svg class="modal-icon" width="18" height="24" fill="none">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
               <input class="input" type="email" name="email" />
-            </div>
-          </label>
+            </label>
+          </div>
           <label class="label">
             Comment
             <textarea
