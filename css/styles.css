@@ -630,8 +630,8 @@ input::placeholder {
   outline: none;
 }
 
-input:focus + svg {
-  fill: #404bbf;
+.input:focus + .modal-icon {
+  fill: #4d5ae5;
 }
 .label-container {
   margin-bottom: 16px;
