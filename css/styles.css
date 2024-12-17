@@ -446,9 +446,6 @@ button {
   fill: #f4f4fd;
 }
 .container-form-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-left: 80px;
 }
 
@@ -632,7 +629,8 @@ input::placeholder {
   border: 1px solid #4d5ae5;
   outline: none;
 }
-.input:focus-within .modal-icon {
+
+input:focus + svg {
   fill: #404bbf;
 }
 .label-container {
